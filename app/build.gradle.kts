@@ -35,6 +35,8 @@ dependencies {
     testImplementation(Libraries.UnitTesting.junit)
     androidTestImplementation(Libraries.UnitTesting.junitext)
     androidTestImplementation(Libraries.AndroidTesting.espresso)
+    //Add module to app
+    implementation(project(":testmodule"))
     
 }
 //Please Like Share and Subscribe and write comment for suggestion and feedback

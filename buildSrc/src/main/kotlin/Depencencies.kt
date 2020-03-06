@@ -13,8 +13,11 @@ object AppPath
 object PluginsId
 {
     const val androidApplication="com.android.application"
+    //Adding Android Library Plugin Id
+    const val android_library = "com.android.library"
     const val kotlin_android="kotlin-android"
     const val kotlin_extension = "kotlin-android-extensions"
+   
 }
 
 //Repace anddroid Parts
