@@ -10,6 +10,8 @@ buildscript {
     dependencies {
         classpath (AppPath.gradle)
         classpath(AppPath.kotlinPlugin)
+        //Add Junit 5 here
+        classpath(AppPath.junit5Plugin)
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle.kts.kts.kts.kts files
     }
