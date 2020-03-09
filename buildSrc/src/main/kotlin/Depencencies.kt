@@ -1,7 +1,14 @@
 object AppPath
 {
-    const val gradle="com.android.tools.build:gradle:3.5.1"
-    const val kotlinPlugin="org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.61"
+    object Versions{
+        const val gradle="3.5.1"
+        const val kotlingradle="1.3.61"
+        const val junit5Plugin="1.6.0.0"
+    }
+    const val gradle="com.android.tools.build:gradle:${Versions.gradle}"
+    const val kotlinPlugin="org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlingradle}"
+    //Add Class Path
+    const val junit5Plugin="de.mannodermaus.gradle.plugins:android-junit5:${Versions.junit5Plugin}"
 
 }
 
@@ -17,6 +24,7 @@ object PluginsId
     const val android_library = "com.android.library"
     const val kotlin_android="kotlin-android"
     const val kotlin_extension = "kotlin-android-extensions"
+    const val junit5= "de.mannodermaus.android-junit5"
    
 }
 
@@ -44,6 +52,7 @@ object  Libraries
         const val junit = "4.12"
         const val junit_ext="1.1.1"
         const val espresso="3.2.0"
+        const val jupiterapi="5.6.0"
 
     }
     object Lib
@@ -63,6 +72,17 @@ object  Libraries
     {
         const val junit = "junit:junit:${Versions.junit}"
         const val junitext="androidx.test.ext:junit:${Versions.junit_ext}"
+        const val junit5="org.junit.jupiter:junit-jupiter-api:${Versions.jupiterapi}"
+        const val jupiterengine="org.junit.jupiter:junit-jupiter-engine:${Versions.jupiterapi}"
+        const val jupiterparams="org.junit.jupiter:junit-jupiter-params:${Versions.jupiterapi}"
+        const val jupitervintage ="org.junit.vintage:junit-vintage-engine:${Versions.jupiterapi}"
+
+
+        // (Optional) If you need "Parameterized Tests"
+
+
+        // (Optional) If you also have JUnit 4-based tests
+
 
     }
 }

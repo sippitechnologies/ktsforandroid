@@ -3,6 +3,7 @@ plugins{
     id(PluginsId.androidApplication)
     id(PluginsId.kotlin_android)
     id(PluginsId.kotlin_extension)
+    id(PluginsId.junit5)
 }
 
 android {
@@ -35,6 +36,17 @@ dependencies {
     testImplementation(Libraries.UnitTesting.junit)
     androidTestImplementation(Libraries.UnitTesting.junitext)
     androidTestImplementation(Libraries.AndroidTesting.espresso)
+    //Junit 5
+    testImplementation(Libraries.UnitTesting.junit5)
+
+    testRuntimeOnly(Libraries.UnitTesting.jupiterengine)
+
+    // (Optional) If you need "Parameterized Tests"
+    testImplementation(Libraries.UnitTesting.jupiterparams)
+
+    // (Optional) If you also have JUnit 4-based tests
+
+    testRuntimeOnly(Libraries.UnitTesting.jupitervintage)
     //Add module to app
     implementation(project(":testmodule"))
     
