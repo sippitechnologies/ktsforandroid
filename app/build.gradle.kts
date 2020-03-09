@@ -17,6 +17,16 @@ android {
         versionCode =App.versionCode
         versionName =App.versionName
         testInstrumentationRunner =App.testRunner
+        testInstrumentationRunnerArgument("runnerBuilder", "de.mannodermaus.junit5.AndroidJUnit5Builder")
+    }
+    compileOptions {
+        setSourceCompatibility(JavaVersion.VERSION_1_8)
+        setTargetCompatibility(JavaVersion.VERSION_1_8)
+    }
+
+    // 4) JUnit 5 will bundle in files with identical paths; exclude them
+    packagingOptions {
+        exclude("META-INF/LICENSE*")
     }
     buildTypes {
         getByName("release") {
@@ -47,6 +57,11 @@ dependencies {
     // (Optional) If you also have JUnit 4-based tests
 
     testRuntimeOnly(Libraries.UnitTesting.jupitervintage)
+
+    //Junit 5 espresso
+    androidTestImplementation(Libraries.AndroidTesting.junit5testcore)
+    androidTestRuntimeOnly(Libraries.AndroidTesting.junit5androidrunner)
+
     //Add module to app
     implementation(project(":testmodule"))
     
