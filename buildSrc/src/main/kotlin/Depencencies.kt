@@ -53,6 +53,7 @@ object  Libraries
         const val junit_ext="1.1.1"
         const val espresso="3.2.0"
         const val jupiterapi="5.6.0"
+        const val junitespresso="1.2.0"
 
     }
     object Lib
@@ -67,6 +68,9 @@ object  Libraries
     object AndroidTesting
     {
         const val espresso ="androidx.test.espresso:espresso-core:${Versions.espresso}"
+        const val junit5testcore = "de.mannodermaus.junit5:android-test-core:${Versions.junitespresso}"
+        const val junit5androidrunner ="de.mannodermaus.junit5:android-test-runner:${Versions.junitespresso}"
+
     }
     object UnitTesting
     {
