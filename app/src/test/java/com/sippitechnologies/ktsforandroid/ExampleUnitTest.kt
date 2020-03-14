@@ -9,6 +9,8 @@ import org.junit.jupiter.api.Assertions.assertEquals
  *
  * See [testing documentation](http://d.android.com/tools/testing).
  */
+
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class ExampleUnitTest {
 
 //Before All is used like static class in Java or object class in Kotlin
